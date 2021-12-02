@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+    <StackLayout>
+        <Label FontSize="48" TextColor="Black" HorizontalOptions="Center" >Usuarios</Label>
+        <ListView x:Name="ListUser" HasUnevenRows="True" >
+            <ListView.ItemTemplate  >
+                <DataTemplate >
+                    <ViewCell >
+                        <StackLayout BackgroundColor="#eee"
+                        Orientation="Horizontal" >
+                            <StackLayout  Margin="10"   Orientation="Horizontal">
+                                <Image Margin="20" Scale="1.3"  Source="{Binding avatar}"/>
+                                <Label Text="{Binding first_name}"
+                                TextColor="#f35e20" HorizontalOptions="Center" VerticalOptions="Center" />
+                                <Label Text="{Binding email}"
+                                HorizontalOptions="Center" VerticalOptions="Center"
+                                TextColor="#503026" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+               
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
